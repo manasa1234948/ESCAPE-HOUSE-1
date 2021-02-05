@@ -47,7 +47,10 @@ function setup(){
     p1=createSprite(250,200,150,150)
     p1.visible=false;
     pp= createInput('Enter Answer here')
-    pp.visible=false
+    pp.hide();
+    
+     pp1= createInput('Enter Answer here')
+    pp1.hide()
     submit=createButton('submit')
     submit.visible=false;
     good=createElement('h2')
@@ -114,7 +117,7 @@ function draw(){
         strokeWeight(55)
         textSize(25)
         text('C O C O H T E L A',500,300)
-        pp.visible=true;
+        pp.show();
         boy.visible=false
         
       
@@ -144,7 +147,7 @@ text("Find the missing letter (hint:the missing letters are vowels",500,200)
 strokeWeight(55)
 textSize(25)
 text('T R  _ _ S _ R _',500,300)
-pp.visible=true;
+pp1.show()
 boy.visible=false
 tbox.visible=false
 
@@ -153,7 +156,7 @@ submit.position(700,400,100,100)
 ans=pp.value()
 submit.mousePressed(()=>{
 if(ans=="TREASURE"||ans=="treasure" ){
-    pp.hide()
+    pp1.hide()
     
     strokeWeight(25)
     textSize(25)
@@ -164,7 +167,6 @@ if(ans=="TREASURE"||ans=="treasure" ){
 }
 })  
     }
-
     if(boy.isTouching(tbox2)){
         p1.addImage(p1img)
         p1.visible=true
